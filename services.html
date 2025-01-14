@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Evodesigns and Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet" />
+    <script
+        src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#FFD700"
+        data-border-radius="small"></script>
+</head>
+
+<body class="font-[Poppins] bg-gray-50">
+    <nav class="bg-black fixed w-full z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="BuildTech Logo"
+                            class="h-12" />
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-[#FFD700] font-medium">Home</a>
+                    <a href="about-us.html" class="text-white hover:text-[#FFD700] font-medium">About Us</a>
+                    <a href="projects.html" class="text-white hover:text-[#FFD700] font-medium">Projects</a>
+                    <a href="services.html" class="text-white hover:text-[#FFD700] font-medium">Services</a>
+                    <a href="contact.html" class="text-white hover:text-[#FFD700] font-medium">Contact</a>
+                    <button
+                        class="bg-[#FFD700] text-black px-6 py-2 rounded-md hover:bg-[#FFD700]/90 font-medium">Contact
+                        Us</button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button
+                        class="bg-[#FFD700] text-black px-4 py-2 rounded-md hover:bg-[#FFD700]/90 font-medium">Contact
+                        Us</button>
+                    <button id="mobile-menu-button" class="p-2">
+                        <i class="fas fa-bars text-white text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed top-0 right-0 h-full w-64 bg-black shadow-lg transform translate-x-full transition-transform duration-300">
+            <div class="flex justify-between items-center px-4 py-4">
+                <span class="font-semibold text-lg text-white"></span>
+                <button id="mobile-menu-close" class="p-2">
+                    <i class="fas fa-times text-white text-2xl"></i>
+                </button>
+            </div>
+            <div class="px-8 pt-2 pb-4 space-y-3">
+                <a href="index.html" class="block text-white hover:text-[#FFD700] font-medium">Home</a>
+                <a href="about-us.html" class="block text-white hover:text-[#FFD700] font-medium">About Us</a>
+                <a href="projects.html" class="block text-white hover:text-[#FFD700] font-medium">Projects</a>
+                <a href="services.html" class="block text-white hover:text-[#FFD700] font-medium">Services</a>
+                <a href="contact.html" class="block text-white hover:text-[#FFD700] font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <header class="pt-20">
+        <div class="relative h-[400px]"><img src="assets/service.jpg" alt="About Us Hero"
+                class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/50">
+                <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
+                    <div class="max-w-2xl text-white">
+                        <h1 class="text-5xl font-bold mb-6">Our Services</h1>
+                        <p class="text-xl">Comprehensive Construction Solutions for Every Need</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-8 py-20">
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-lg shadow-sm"><img src="assets/s-2.jpg" alt="Commercial Construction"
+                        class="w-full h-48 object-cover rounded-lg mb-6" />
+                    <div class="text-custom mb-6"><i class="fas fa-building text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-4">Commercial Construction</h3>
+                    <p class="text-gray-600 mb-4">Expert construction services for office buildings, retail spaces, and
+                        industrial facilities.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Office Buildings</li>
+                        <li>• Retail Centers</li>
+                        <li>• Industrial Facilities</li>
+                        <li>• Warehouses</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm"><img src="assets/s-3.jpg" alt="Residential Construction"
+                        class="w-full h-48 object-cover rounded-lg mb-6" />
+                    <div class="text-custom mb-6"><i class="fas fa-home text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-4">Residential Construction</h3>
+                    <p class="text-gray-600 mb-4">Custom home building and residential development projects.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Custom Homes</li>
+                        <li>• Multi-family Units</li>
+                        <li>• Renovations</li>
+                        <li>• Home Extensions</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm"><img src="assets/s-4.jpg" alt="Renovation Services"
+                        class="w-full h-48 object-cover rounded-lg mb-6" />
+                    <div class="text-custom mb-6"><i class="fas fa-tools text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-4">Renovation Services</h3>
+                    <p class="text-gray-600 mb-4">Complete renovation and remodeling services for all property types.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Interior Remodeling</li>
+                        <li>• Exterior Renovations</li>
+                        <li>• Property Upgrades</li>
+                        <li>• Historic Restorations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm"><img src="assets/s-5.jpg" alt="Interior Design"
+                        class="w-full h-48 object-cover rounded-lg mb-6" />
+                    <div class="text-custom mb-6"><i class="fas fa-paint-brush text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-4">Interior Design</h3>
+                    <p class="text-gray-600 mb-4">Professional interior design and space planning services.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Space Planning</li>
+                        <li>• Color Consultation</li>
+                        <li>• Furniture Selection</li>
+                        <li>• Lighting Design</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm"><img src="assets/s-6.jpg" alt="Heavy Construction"
+                        class="w-full h-48 object-cover rounded-lg mb-6" />
+                    <div class="text-custom mb-6"><i class="fas fa-truck text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-4">Heavy Construction</h3>
+                    <p class="text-gray-600 mb-4">Large-scale construction projects and infrastructure development.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Infrastructure Projects</li>
+                        <li>• Bridge Construction</li>
+                        <li>• Road Development</li>
+                        <li>• Site Preparation</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm"><img src="assets/s-7.webp" alt="Sustainable Building"
+                        class="w-full h-48 object-cover rounded-lg mb-6" />
+                    <div class="text-custom mb-6"><i class="fas fa-seedling text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-4">Sustainable Building</h3>
+                    <p class="text-gray-600 mb-4">Eco-friendly construction solutions and green building practices.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• LEED Certification</li>
+                        <li>• Solar Integration</li>
+                        <li>• Energy Efficiency</li>
+                        <li>• Sustainable Materials</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-8 py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Process</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">How we deliver exceptional results for every project</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-custom rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                        1</div>
+                    <h3 class="text-xl font-semibold mb-2">Consultation</h3>
+                    <p class="text-gray-600">Initial meeting to understand your needs and vision</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-custom rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                        2</div>
+                    <h3 class="text-xl font-semibold mb-2">Planning</h3>
+                    <p class="text-gray-600">Detailed project planning and design development</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-custom rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                        3</div>
+                    <h3 class="text-xl font-semibold mb-2">Construction</h3>
+                    <p class="text-gray-600">Expert execution with quality control</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-custom rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                        4</div>
+                    <h3 class="text-xl font-semibold mb-2">Completion</h3>
+                    <p class="text-gray-600">Final inspection and project handover</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-100 py-20">
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div><img src="assets/s-9.webp" alt="Construction Services Overview"
+                            class="w-full h-[400px] object-cover rounded-lg shadow-lg" /></div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Comprehensive Construction Solutions</h2>
+                        <p class="text-gray-600 mb-6">At Evodesigns and Construction, we offer a complete range of
+                            construction services designed to meet diverse project requirements. From commercial
+                            developments to residential builds, our experienced team delivers excellence at every step.
+                        </p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-custom mr-3"></i>Full-service
+                                construction management</li>
+                            <li class="flex items-center"><i class="fas fa-check text-custom mr-3"></i>Custom design and
+                                build solutions</li>
+                            <li class="flex items-center"><i class="fas fa-check text-custom mr-3"></i>Renovation and
+                                modernization</li>
+                            <li class="flex items-center"><i class="fas fa-check text-custom mr-3"></i>Sustainable
+                                building practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-8 py-20 bg-gray-100">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Specialized Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Additional construction services to meet your specific needs
+                </p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-custom mb-4"><i class="fas fa-hard-hat text-3xl"></i></div>
+                    <h3 class="text-lg font-semibold mb-2">Project Management</h3>
+                    <p class="text-gray-600">Comprehensive project oversight and coordination</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-custom mb-4"><i class="fas fa-pencil-ruler text-3xl"></i></div>
+                    <h3 class="text-lg font-semibold mb-2">Design-Build</h3>
+                    <p class="text-gray-600">Integrated design and construction services</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-custom mb-4"><i class="fas fa-leaf text-3xl"></i></div>
+                    <h3 class="text-lg font-semibold mb-2">Green Building</h3>
+                    <p class="text-gray-600">Sustainable construction practices</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-custom mb-4"><i class="fas fa-wrench text-3xl"></i></div>
+                    <h3 class="text-lg font-semibold mb-2">Maintenance</h3>
+                    <p class="text-gray-600">Ongoing building maintenance services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-[#FFD700] mb-2">25+</div>
+                    <div class="text-gray-400">Years in Business</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-[#FFD700] mb-2">500+</div>
+                    <div class="text-gray-400">Projects Completed</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-[#FFD700] mb-2">150+</div>
+                    <div class="text-gray-400">Team Members</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-[#FFD700] mb-2">98%</div>
+                    <div class="text-gray-400">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Read testimonials from our satisfied clients</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="text-custom mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">&#34;Evodesigns and exceeded our expectations with their
+                        professionalism
+                        and attention to detail. They delivered our project on time and within budget.&#34;</p>
+                    <div class="flex items-center">
+                        <img src="https://creatie.ai/ai/api/search-image?query=Professional headshot of a middle-aged business executive in formal attire, natural lighting, neutral background&width=50&height=50&orientation=squarish&flag=5525c06a-823c-4574-a1cc-f5eaa49940b2&flag=225bab07-09b7-43e4-b97a-d0b87b1eae0c&flag=04097eeb-93f7-470d-a552-466f4a71d68f&flag=9d6c2255-56bc-48da-a772-22739813e672&flag=21037089-e67f-48d6-bc2b-d110c8a66537&flag=c02c00cc-1c71-494f-b84c-023ba865e556&flag=a9ca474a-61c3-4838-b8cd-d6887d2b17b2&flag=5918ddda-bf00-40e3-9f4b-a51db7c64a13"
+                            alt="Client 1" class="w-12 h-12 rounded-full" />
+                        <div class="ml-4">
+                            <div class="font-semibold">John Anderson</div>
+                            <div class="text-sm text-gray-500">CEO, Tech Solutions Inc.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="text-custom mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">&#34;Working with Evodesigns and was a pleasure. Their team&#39;s
+                        expertise
+                        and commitment to quality were evident throughout the project.&#34;</p>
+                    <div class="flex items-center">
+                        <img src="https://creatie.ai/ai/api/search-image?query=Professional headshot of a female business leader in corporate attire, warm smile, office setting&width=50&height=50&orientation=squarish&flag=47372b29-5167-4ae6-a450-f8890b80d886&flag=1337b36b-f3e3-4307-b3b1-717b5ccdd112&flag=1863e4bd-127e-40bf-bd12-7f488be3cb68&flag=047f559e-4939-4889-8470-af80fac5eaaa&flag=02bb2d8e-4ce6-409a-8986-3328494fea07&flag=d46734a1-7855-4483-8d38-74dc605cd082&flag=ff8be097-27c7-4f59-b64b-e5f0b32317d1&flag=5b75d71f-c67b-4305-9922-d4bf34b6ade9"
+                            alt="Client 2" class="w-12 h-12 rounded-full" />
+                        <div class="ml-4">
+                            <div class="font-semibold">Sarah Thompson</div>
+                            <div class="text-sm text-gray-500">Director, Real Estate Development</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="text-custom mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">&#34;The team at Evodesigns and demonstrated exceptional
+                        problem-solving
+                        skills and maintained clear communication throughout our project.&#34;</p>
+                    <div class="flex items-center">
+                        <img src="https://creatie.ai/ai/api/search-image?query=Professional headshot of a mature businessman in suit, confident pose, modern office background&width=50&height=50&orientation=squarish&flag=96dbf35a-1f2c-4eb8-bc58-ced246f01929&flag=01b0083a-60c0-42a9-9a03-6e392f22fb6a&flag=915a4fd7-dea7-4301-bf08-0c7e82fb63e2&flag=4091b954-d2a5-415a-99e1-fd8636dce3ac&flag=2a708dfb-d51e-456a-aea6-28aed1dfae58&flag=1e99bd20-e9db-45e7-8d3f-c69749bf27b2&flag=596919eb-6d20-49db-bdd5-76d4788c724e&flag=493c86f9-eee2-4958-809d-e3a65e33e463"
+                            alt="Client 3" class="w-12 h-12 rounded-full" />
+                        <div class="ml-4">
+                            <div class="font-semibold">Michael Roberts</div>
+                            <div class="text-sm text-gray-500">Property Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <img src="logos.svg" alt="Evodesigns and Logo" class="h-32 mb-6" />
+                    <p class="text-gray-400">Building excellence through innovation and dedication to quality
+                        construction.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about-us.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <p class="text-gray-400 mb-4">Send us your email, and we'll get back to you.</p>
+                    <form class="flex w-full">
+                        <input type="email" placeholder="Your email"
+                            class="flex-1 px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-custom w-full"
+                            required />
+                        <button type="submit"
+                            class="bg-[#FFD700] text-gray-900 px-4 py-1 rounded-r-md hover:bg-[#FFD700]/90 font-medium text-sm">
+                            Send
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2025 Evodesigns and Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.remove('translate-x-full');
+    });
+
+    document.getElementById('mobile-menu-close').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.add('translate-x-full');
+    });
+</script>
