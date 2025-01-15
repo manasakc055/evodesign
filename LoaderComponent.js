@@ -28,14 +28,33 @@ class LoaderComponent {
                     justify-content: center;
                     align-items: center;
                 }
+
                 #loader video {
-                    max-width: 100%;
-                    max-height: 100%;
-                    object-fit: contain;
+                    width: 80%; /* Responsive video width */
+                    max-width: 600px; /* Maximum width for larger screens */
+                    height: auto;
+                    max-height: 80%; /* Ensure it fits smaller screens */
+                    object-fit: contain; /* Maintain aspect ratio */
                 }
+
+                @media (max-width: 768px) {
+                    #loader video {
+                        width: 90%; /* Increase width for smaller devices */
+                        max-width: 500px; /* Adjust for medium screens */
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    #loader video {
+                        width: 100%; /* Full width on very small devices */
+                        max-width: 300px; /* Adjust max-width for small screens */
+                    }
+                }
+
                 #loader.hidden {
                     opacity: 0;
                     visibility: hidden;
+                    transition: opacity 0.3s ease-in-out; /* Smooth hide transition */
                 }
             </style>
         `;
@@ -57,5 +76,4 @@ class LoaderComponent {
     }
 }
 
-// Export the component
 export default LoaderComponent;
