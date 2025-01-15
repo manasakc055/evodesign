@@ -13,7 +13,7 @@ class LoaderComponent {
 
         const loaderHTML = `
             <div id="loader">
-                <video src="./anim/loading.webm" autoplay loop muted></video>
+                <video src="./assets/anim/loading.webm" autoplay loop muted></video>
             </div>
             <style>
                 #loader {
