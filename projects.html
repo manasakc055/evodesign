@@ -143,17 +143,6 @@
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-lg project-item interior"><img
-                            src="assets/p-10.webp" alt="Construction Project 3"
-                            class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="absolute bottom-0 left-0 right-0 p-6">
-                                <h3 class="text-white text-xl font-semibold mb-2">Dining Interior</h3>
-                                <p class="text-gray-200">Glass stairs modern interior</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-lg project-item interior"><img
                             src="assets/p-1.webp" alt="Construction Project 4"
                             class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110" />
                         <div
@@ -402,7 +391,12 @@
             </div>
         </div>
     </section>
-
+    <div id="fullscreen-modal" class="fullscreen-modal">
+        <button class="close-btn">&times;</button>
+        <button class="nav-btn prev-btn">&#8249;</button>
+        <img src="" alt="Fullscreen Project" />
+        <button class="nav-btn next-btn">&#8250;</button>
+    </div>
    <!---footer--->
 
    <footer class="bg-gray-900 text-white py-16">
@@ -464,38 +458,36 @@
 </body>
 
 </html>
+
 <script>
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.remove('translate-x-full');
-    });
+    const projectItems = document.querySelectorAll('.project-item img');
+    const modal = document.getElementById('fullscreen-modal');
+    const modalImg = modal.querySelector('img');
+    const closeModal = modal.querySelector('.close-btn');
+    const prevBtn = modal.querySelector('.prev-btn');
+    const nextBtn = modal.querySelector('.next-btn');
+    let currentIndex = 0;
 
-    document.getElementById('mobile-menu-close').addEventListener('click', function () {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.add('translate-x-full');
-    });
-
-
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
-
-    filterButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const filter = button.getAttribute('data-filter');
-
-            projectItems.forEach((item) => {
-                if (filter === 'all' || item.classList.contains(filter)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // Update active button styling
-            filterButtons.forEach((btn) => btn.classList.remove('active'));
-            button.classList.add('active');
+    projectItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImg.src = item.src;
+            currentIndex = index;
         });
     });
 
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + projectItems.length) % projectItems.length;
+        modalImg.src = projectItems[currentIndex].src;
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % projectItems.length;
+        modalImg.src = projectItems[currentIndex].src;
+    });
 </script>
 <script type="module" src="main.js"></script>
