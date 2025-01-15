@@ -117,82 +117,60 @@
         });
     </script>
 
-    <header class="h-full">
-        <div class="swiper-container relative h-full">
-            <!-- Swiper Wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide h-full">
-                    <img src="assets/p-18.webp" alt="Construction Site"
-                         class="w-full h-full object-cover" />
-                    <div class="absolute inset-0 bg-black/50">
-                        <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
-                            <div class="max-w-2xl text-white">
-                                <h1 class="text-5xl font-bold mb-6">Building Tomorrow&#39;s Landmarks Today</h1>
-                                <p class="text-xl mb-8">With over 25 years of experience, we deliver exceptional construction
-                                    solutions that transform visions into reality.</p>
-                                <a href="projects.html">
-                                    <button
-                                            class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
-                                        Projects
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-
-                <div class="swiper-slide h-full">
-                    <img src="assets/p-13.webp" alt="Another Site"
-                         class="w-full h-full object-cover" />
-                    <div class="absolute inset-0 bg-black/70">
-                        <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
-                            <div class="max-w-2xl text-white">
-                                <h1 class="text-5xl font-bold mb-6">Crafting Your Dreams with Precision</h1>
-                                <p class="text-xl mb-8">From planning to execution, we bring innovation and quality to every
-                                    project.</p>
-                                <a href="services.html">
-                                    <button
-                                            class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
-                                        Projects
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide h-full">
-                    <img src="assets/header.webp" alt="Another Site"
-                         class="w-full h-full object-cover" />
-                    <div class="absolute inset-0 bg-black/50">
-                        <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
-                            <div class="max-w-2xl text-white">
-                                <h1 class="text-5xl font-bold mb-6">Crafting Your Dreams with Precision</h1>
-                                <p class="text-xl mb-8">From planning to execution, we bring innovation and quality to every
-                                    project.</p>
-                                <a href="services.html">
-                                    <button
-                                            class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
-                                        Projects
-                                    </button>
-                                </a>
-                            </div>
+<header class="h-screen">
+    <div class="swiper-container relative h-full">
+        <!-- Swiper Wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide h-full">
+                <img src="assets/header.webp" alt="Construction Site"
+                    class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black/50">
+                    <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
+                        <div class="max-w-2xl text-white">
+                            <h1 class="text-5xl font-bold mb-6">Building Tomorrow&#39;s Landmarks Today</h1>
+                            <p class="text-xl mb-8">With over 25 years of experience, we deliver exceptional construction
+                                solutions that transform visions into reality.</p>
+                            <a href="projects.html">
+                                <button
+                                    class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
+                                    View Our Projects
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Swiper Navigation -->
-            <div class="swiper-button-next text-white"></div>
-            <div class="swiper-button-prev text-white"></div>
-
-            <!-- Swiper Pagination -->
-            <div class="swiper-pagination"></div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide h-full">
+                <img src="assets/header-1.jpg" alt="Another Site"
+                    class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black/50">
+                    <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
+                        <div class="max-w-2xl text-white">
+                            <h1 class="text-5xl font-bold mb-6">Crafting Your Dreams with Precision</h1>
+                            <p class="text-xl mb-8">From planning to execution, we bring innovation and quality to every
+                                project.</p>
+                            <a href="services.html">
+                                <button
+                                    class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
+                                    Explore Our Services
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+
+        <!-- Swiper Navigation -->
+        <div class="swiper-button-next text-white"></div>
+        <div class="swiper-button-prev text-white"></div>
+
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</header>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
@@ -613,4 +591,11 @@
 <script>
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
         const mobileMenu = document.getElementById('mobile-menu');
-        mo
+        mobileMenu.classList.remove('translate-x-full');
+    });
+
+    document.getElementById('mobile-menu-close').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.add('translate-x-full');
+    });
+</script>
