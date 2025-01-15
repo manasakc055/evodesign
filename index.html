@@ -16,17 +16,23 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
         }
+
         .swiper-container {
-            overflow: hidden; /* Prevents scrollbar flash */
+            overflow: hidden;
+            /* Prevents scrollbar flash */
         }
+
         .swiper-slide {
             position: relative;
-            background-color: black; /* Prevents white flash during fade */
+            background-color: black;
+            /* Prevents white flash during fade */
         }
+
         .swiper-button-next,
         .swiper-button-prev {
             /* background-color: rgba(0, 0, 0, 0.6); */
@@ -34,40 +40,43 @@
             border-radius: 50%;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .swiper-pagination-bullet {
             background-color: rgba(255, 255, 255, 0.7);
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .swiper-pagination-bullet-active {
             background-color: #F99A40;
             transform: scale(1.2);
         }
-
     </style>
 
 </head>
 
 <body class="font-[Poppins] bg-gray-50">
-
-    <nav id="navbar" class="bg-transparent fixed w-full z-50 shadow-sm transition-colors duration-300 borderborder-b border-white">
+    <div id="loader-container"></div>
+    <nav id="navbar"
+        class="bg-transparent fixed w-full z-50 shadow-sm transition-colors duration-300 borderborder-b border-white">
         <div class="max-w-7xl mx-auto px-8">
             <div class="flex justify-between items-center h-auto py-2">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="index.html">
-                        <img src="log1.svg" alt="BuildTech Logo"
-                            class="h-16 md:h-24" />
+                        <img src="log1.svg" alt="BuildTech Logo" class="h-16 md:h-24" />
                     </a>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-[#F99A40] border-b border-[#F99A40] hover:text-[#F99A40] font-medium">Home</a>
+                    <a href="index.html"
+                        class="text-[#F99A40] border-b border-[#F99A40] hover:text-[#F99A40] font-medium">Home</a>
                     <a href="about-us.html" class="text-white hover:text-[#F99A40]">About Us</a>
                     <a href="projects.html" class="text-white hover:text-[#F99A40]">Projects</a>
                     <a href="services.html" class="text-white hover:text-[#F99A40]">Services</a>
                     <!-- <a href="contact.html" class="text-white hover:text-[#F99A40]">Contact</a> -->
                     <a href="contact.html">
-                        <button class="border border-[#F99A40] text-white border-2 text-black px-6 py-2 rounded-md hover:bg-[#F99A40]/90 font-medium">
+                        <button
+                            class="border border-[#F99A40] text-white border-2 text-black px-6 py-2 rounded-md hover:bg-[#F99A40]/90 font-medium">
                             Contact Us
                         </button>
                     </a>
@@ -117,109 +126,109 @@
             });
         });
     </script>
-    <div id="loader-container"></div>
-<header class="h-full">
-    <div class="swiper-container relative h-full">
-        <!-- Swiper Wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide h-full">
-                <img src="assets/p-18.webp" alt="Construction Site"
-                    class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-black/50">
-                    <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
-                        <div class="max-w-2xl text-white">
-                            <h1 class="text-5xl font-bold mb-6">Redefining Excellence in Modern Construction</h1>
-                            <p class="text-xl mb-8">We transform ideas into architectural masterpieces, blending innovation, precision, and sustainability to create timeless designs.</p>
+    <header class="h-full">
+        <div class="swiper-container relative h-full">
+            <!-- Swiper Wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide h-full">
+                    <img src="assets/p-18.webp" alt="Construction Site" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-black/50">
+                        <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
+                            <div class="max-w-2xl text-white">
+                                <h1 class="text-5xl font-bold mb-6">Redefining Excellence in Modern Construction</h1>
+                                <p class="text-xl mb-8">We transform ideas into architectural masterpieces, blending
+                                    innovation, precision, and sustainability to create timeless designs.</p>
 
-                            <a href="projects.html">
-                                <button
-                                    class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
-                                    Projects
-                                </button>
-                            </a>
+                                <a href="projects.html">
+                                    <button
+                                        class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
+                                        Projects
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+
+                <div class="swiper-slide h-full">
+                    <img src="assets/p-13.webp" alt="Another Site" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-black/70">
+                        <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
+                            <div class="max-w-2xl text-white">
+                                <h1 class="text-5xl font-bold mb-6">Crafting Your Dreams with Precision</h1>
+                                <p class="text-xl mb-8">From planning to execution, we bring innovation and quality to
+                                    every
+                                    project.</p>
+                                <a href="services.html">
+                                    <button
+                                        class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
+                                        Projects
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide h-full">
+                    <img src="assets/p-20.webp           " alt="Another Site" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-black/50">
+                        <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
+                            <div class="max-w-2xl text-white">
+                                <h1 class="text-5xl font-bold mb-6">Crafting Your Dreams with Precision</h1>
+                                <p class="text-xl mb-8">From planning to execution, we bring innovation and quality to
+                                    every
+                                    project.</p>
+                                <a href="services.html">
+                                    <button
+                                        class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
+                                        Projects
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Slide 2 -->
 
-            <div class="swiper-slide h-full">
-                <img src="assets/p-13.webp" alt="Another Site"
-                    class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-black/70">
-                    <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
-                        <div class="max-w-2xl text-white">
-                            <h1 class="text-5xl font-bold mb-6">Crafting Your Dreams with Precision</h1>
-                            <p class="text-xl mb-8">From planning to execution, we bring innovation and quality to every
-                                project.</p>
-                            <a href="services.html">
-                                <button
-                                    class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
-                                    Projects
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Swiper Navigation -->
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
 
-
-            <div class="swiper-slide h-full">
-                <img src="assets/p-20.webp           " alt="Another Site"
-                    class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-black/50">
-                    <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
-                        <div class="max-w-2xl text-white">
-                            <h1 class="text-5xl font-bold mb-6">Crafting Your Dreams with Precision</h1>
-                            <p class="text-xl mb-8">From planning to execution, we bring innovation and quality to every
-                                project.</p>
-                            <a href="services.html">
-                                <button
-                                    class="bg-[#F99A40] text-gray-900 px-8 py-3 rounded-lg hover:bg-[#F99A40]/90 font-medium transition-transform transform hover:scale-105">
-                                    Projects
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
+    </header>
 
-        <!-- Swiper Navigation -->
-        <div class="swiper-button-next text-white"></div>
-        <div class="swiper-button-prev text-white"></div>
 
-        <!-- Swiper Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
-</header>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            effect: 'fade', // Use fade effect for smooth transitions
-            fadeEffect: {
-                crossFade: true, // Ensures smooth fading between slides
-            },
-            speed: 1200, // Smooth fade duration
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                effect: 'fade', // Use fade effect for smooth transitions
+                fadeEffect: {
+                    crossFade: true, // Ensures smooth fading between slides
+                },
+                speed: 1200, // Smooth fade duration
+            });
         });
-    });
-</script>
+    </script>
 
 
     <section class="py-20">
@@ -437,61 +446,61 @@
     </div>
 
     <!---testinomials-->
-<!--    <section class="py-20">-->
-<!--        <div class="max-w-7xl mx-auto px-8">-->
-<!--            <div class="text-center mb-16">-->
-<!--                <h2 class="text-4xl font-bold mb-4">What Our Clients Say</h2>-->
-<!--                <p class="text-gray-600 max-w-2xl mx-auto">Read testimonials from our satisfied clients</p>-->
-<!--            </div>-->
-<!--            <div class="grid md:grid-cols-3 gap-8">-->
-<!--                <div class="bg-white p-8 rounded-lg shadow-sm">-->
-<!--                    <div class="text-custom mb-4">-->
-<!--                        <i class="fas fa-quote-left text-3xl"></i>-->
-<!--                    </div>-->
-<!--                    <p class="text-gray-600 mb-6">&#34;Evodesigns and exceeded our expectations with their-->
-<!--                        professionalism-->
-<!--                        and attention to detail. They delivered our project on time and within budget.&#34;</p>-->
-<!--                    <div class="flex items-center">-->
-<!--                        <img src="assets/IMG 9.webp" alt="Client 1" class="w-12 h-12 rounded-full" />-->
-<!--                        <div class="ml-4">-->
-<!--                            <div class="font-semibold">John Anderson</div>-->
-<!--                            <div class="text-sm text-gray-500">CEO, Tech Solutions Inc.</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="bg-white p-8 rounded-lg shadow-sm">-->
-<!--                    <div class="text-custom mb-4">-->
-<!--                        <i class="fas fa-quote-left text-3xl"></i>-->
-<!--                    </div>-->
-<!--                    <p class="text-gray-600 mb-6">&#34;Working with Evodesigns and was a pleasure. Their team&#39;s-->
-<!--                        expertise-->
-<!--                        and commitment to quality were evident throughout the project.&#34;</p>-->
-<!--                    <div class="flex items-center">-->
-<!--                        <img src="assets/IMG 10.webp" alt="Client 2" class="w-12 h-12 rounded-full" />-->
-<!--                        <div class="ml-4">-->
-<!--                            <div class="font-semibold">Sarah Thompson</div>-->
-<!--                            <div class="text-sm text-gray-500">Director, Real Estate Development</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="bg-white p-8 rounded-lg shadow-sm">-->
-<!--                    <div class="text-custom mb-4">-->
-<!--                        <i class="fas fa-quote-left text-3xl"></i>-->
-<!--                    </div>-->
-<!--                    <p class="text-gray-600 mb-6">&#34;The team at Evodesigns and demonstrated exceptional-->
-<!--                        problem-solving-->
-<!--                        skills and maintained clear communication throughout our project.&#34;</p>-->
-<!--                    <div class="flex items-center">-->
-<!--                        <img src="assets/IMG 11.webp" alt="Client 3" class="w-12 h-12 rounded-full" />-->
-<!--                        <div class="ml-4">-->
-<!--                            <div class="font-semibold">Michael Roberts</div>-->
-<!--                            <div class="text-sm text-gray-500">Property Developer</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
+    <!--    <section class="py-20">-->
+    <!--        <div class="max-w-7xl mx-auto px-8">-->
+    <!--            <div class="text-center mb-16">-->
+    <!--                <h2 class="text-4xl font-bold mb-4">What Our Clients Say</h2>-->
+    <!--                <p class="text-gray-600 max-w-2xl mx-auto">Read testimonials from our satisfied clients</p>-->
+    <!--            </div>-->
+    <!--            <div class="grid md:grid-cols-3 gap-8">-->
+    <!--                <div class="bg-white p-8 rounded-lg shadow-sm">-->
+    <!--                    <div class="text-custom mb-4">-->
+    <!--                        <i class="fas fa-quote-left text-3xl"></i>-->
+    <!--                    </div>-->
+    <!--                    <p class="text-gray-600 mb-6">&#34;Evodesigns and exceeded our expectations with their-->
+    <!--                        professionalism-->
+    <!--                        and attention to detail. They delivered our project on time and within budget.&#34;</p>-->
+    <!--                    <div class="flex items-center">-->
+    <!--                        <img src="assets/IMG 9.webp" alt="Client 1" class="w-12 h-12 rounded-full" />-->
+    <!--                        <div class="ml-4">-->
+    <!--                            <div class="font-semibold">John Anderson</div>-->
+    <!--                            <div class="text-sm text-gray-500">CEO, Tech Solutions Inc.</div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="bg-white p-8 rounded-lg shadow-sm">-->
+    <!--                    <div class="text-custom mb-4">-->
+    <!--                        <i class="fas fa-quote-left text-3xl"></i>-->
+    <!--                    </div>-->
+    <!--                    <p class="text-gray-600 mb-6">&#34;Working with Evodesigns and was a pleasure. Their team&#39;s-->
+    <!--                        expertise-->
+    <!--                        and commitment to quality were evident throughout the project.&#34;</p>-->
+    <!--                    <div class="flex items-center">-->
+    <!--                        <img src="assets/IMG 10.webp" alt="Client 2" class="w-12 h-12 rounded-full" />-->
+    <!--                        <div class="ml-4">-->
+    <!--                            <div class="font-semibold">Sarah Thompson</div>-->
+    <!--                            <div class="text-sm text-gray-500">Director, Real Estate Development</div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="bg-white p-8 rounded-lg shadow-sm">-->
+    <!--                    <div class="text-custom mb-4">-->
+    <!--                        <i class="fas fa-quote-left text-3xl"></i>-->
+    <!--                    </div>-->
+    <!--                    <p class="text-gray-600 mb-6">&#34;The team at Evodesigns and demonstrated exceptional-->
+    <!--                        problem-solving-->
+    <!--                        skills and maintained clear communication throughout our project.&#34;</p>-->
+    <!--                    <div class="flex items-center">-->
+    <!--                        <img src="assets/IMG 11.webp" alt="Client 3" class="w-12 h-12 rounded-full" />-->
+    <!--                        <div class="ml-4">-->
+    <!--                            <div class="font-semibold">Michael Roberts</div>-->
+    <!--                            <div class="text-sm text-gray-500">Property Developer</div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
     <!---contact-->
     <section class="py-20">
         <div class="max-w-[95%] md:max-w-7xl mx-auto px-4 md:px-8">
@@ -502,23 +511,23 @@
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
                             <input type="text"
-                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom"
-                                   placeholder="Your name" />
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom"
+                                placeholder="Your name" />
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
                             <input type="email"
-                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom"
-                                   placeholder="Your email" />
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom"
+                                placeholder="Your email" />
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
                             <textarea
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom h-32"
-                                    placeholder="Your message"></textarea>
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom h-32"
+                                placeholder="Your message"></textarea>
                         </div>
                         <button type="submit"
-                                class="bg-[#F99A40] text-gray-900 px-6 py-3 !rounded-button hover:bg-[#F99A40]/90 w-full font-medium">Send
+                            class="bg-[#F99A40] text-gray-900 px-6 py-3 !rounded-button hover:bg-[#F99A40]/90 w-full font-medium">Send
                             Message</button>
                     </form>
                 </div>
@@ -530,7 +539,8 @@
                                 <i class="fas fa-map-marker-alt text-custom mt-1"></i>
                                 <div class="ml-4">
                                     <h4 class="font-medium">Address</h4>
-                                    <p class="text-gray-600">EvoDesign, Kalliyadickal Complex, Madathil, Iritty, Kerala, 670703</p>
+                                    <p class="text-gray-600">EvoDesign, Kalliyadickal Complex, Madathil, Iritty, Kerala,
+                                        670703</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -550,13 +560,9 @@
                         </div>
                         <div class="mt-8" style="max-width: 100%; overflow: hidden; text-align: center;">
                             <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3902.5668944512836!2d75.68844207506042!3d12.004441988229082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDAwJzE2LjAiTiA3NcKwNDEnMjcuNyJF!5e0!3m2!1sen!2sin!4v1736947809276!5m2!1sen!2sin"
-                                    width="100%"
-                                    height="250"
-                                    style="border: 0;"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3902.5668944512836!2d75.68844207506042!3d12.004441988229082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDAwJzE2LjAiTiA3NcKwNDEnMjcuNyJF!5e0!3m2!1sen!2sin!4v1736947809276!5m2!1sen!2sin"
+                                width="100%" height="250" style="border: 0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
                     </div>
@@ -589,10 +595,12 @@
                     <h4 class="text-lg font-semibold mb-6">Connect With Us</h4>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/evo_design_constructions?igsh=MWJxaWFjN2hiZnl6MA%3D%3D&utm_source=qr"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/evo_design_constructions/?igsh=MWJxaWFjN2hiZnl6MA%3D%3D&utm_source=qr" class="text-gray-400 hover:text-white text-xl"><i
+                                class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.youtube.com/channel/UCwirZZJa0apc1ZB8ugioTng" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCwirZZJa0apc1ZB8ugioTng"
+                            class="text-gray-400 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div>
@@ -611,12 +619,20 @@
 
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2025 Evodesigns and Construction. All rights reserved.</p>
+                <div>
+                    <p>© 2025 Evodesign and Constructions. All rights reserved.</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-2 mt-2">
+                    Developed By &nbsp;
+                    <a href="https://www.unistacx.com/" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-2 font-bold bg-white p-1 rounded">
+                        <img src="./assets/img/unistacx_logo.svg" alt="Unistacx Logo" class="h-auto w-[5em]" />
+                    </a>
+                </div>
             </div>
-        </div>
     </footer>
 </body>
- 
+
 </html>
 <script>
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
@@ -630,5 +646,3 @@
     });
 </script>
 <script type="module" src="main.js"></script>
-
-
