@@ -4,30 +4,72 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services - Evodesigns and Construction</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+    <title>Projects - Evodesigns and Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet" />
     <script
-        src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+            src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
     <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#F99A40"
-        data-border-radius="small"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            data-border-radius="small"></script>
     <style>
         .project-item {
             transition: all 0.3s ease;
         }
 
-        .project-item.hide {
+        .fullscreen-modal {
             display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .fullscreen-modal img {
+            max-width: 90%;
+            max-height: 80%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .fullscreen-modal .close-btn,
+        .fullscreen-modal .nav-btn {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 1001;
+        }
+
+        .fullscreen-modal .close-btn {
+            top: 20px;
+            right: 20px;
+        }
+
+        .fullscreen-modal .prev-btn {
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+
+        .fullscreen-modal .next-btn {
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
         }
     </style>
 </head>
 
 <body class="font-[Poppins] bg-gray-50">
     <!--navbar-->
+    <div id="loader-container"></div>
     <nav id="navbar" class="bg-black sticky top-0 w-full z-50 shadow-sm transition-colors duration-300 borderborder-b border-white">
         <div class="max-w-7xl mx-auto px-8">
             <div class="flex justify-between items-center h-auto py-2">
@@ -82,9 +124,9 @@
     </nav>
 
     <!--header-->
-    <header class="">
+    <header>
         <div class="relative h-[400px]"><img src="assets/s-1.jpg" alt="About Us Hero"
-                class="w-full h-full object-cover" />
+                                             class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/50">
                 <div class="max-w-7xl mx-auto px-8 h-full flex items-center">
                     <div class="max-w-2xl text-white">
@@ -95,7 +137,7 @@
             </div>
         </div>
     </header>
-    <div id="loader-container"></div>
+
     <!--section1-->
     <div class="max-w-7xl mx-auto px-8 py-20">
         <section class="py-20 bg-white">
@@ -120,7 +162,8 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 project-gallery">
-                    <div class="group relative overflow-hidden rounded-lg project-item interior"><img
+                    <div class="group relative overflow-hidden rounded-lg project-item interior">
+                        <img
                             src="assets/starirs.jpg" alt="Construction Project 1"
                             class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110" />
                         <div
@@ -235,7 +278,50 @@
         </section>
 
     </div>
+    <div id="fullscreen-modal" class="fullscreen-modal">
+        <button class="close-btn">&times;</button>
+        <button class="nav-btn prev-btn">&#8249;</button>
+        <img src="" alt="Fullscreen Project" />
+        <button class="nav-btn next-btn">&#8250;</button>
+    </div>
 
+    <script>
+        const projectItems = document.querySelectorAll('.project-item img');
+        const modal = document.getElementById('fullscreen-modal');
+        const modalImg = modal.querySelector('img');
+        const closeModal = modal.querySelector('.close-btn');
+        const prevBtn = modal.querySelector('.prev-btn');
+        const nextBtn = modal.querySelector('.next-btn');
+        let currentIndex = 0;
+
+        projectItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = item.src;
+                currentIndex = index;
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + projectItems.length) % projectItems.length;
+            modalImg.src = projectItems[currentIndex].src;
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % projectItems.length;
+            modalImg.src = projectItems[currentIndex].src;
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
     <!--section-2-->
     <section class="py-20">
         <section class="py-20 bg-gray-100">
@@ -457,9 +543,9 @@
 
 </body>
 
-</html>
 
-<script>
+
+<!--<script>
     const projectItems = document.querySelectorAll('.project-item img');
     const modal = document.getElementById('fullscreen-modal');
     const modalImg = modal.querySelector('img');
@@ -489,5 +575,6 @@
         currentIndex = (currentIndex + 1) % projectItems.length;
         modalImg.src = projectItems[currentIndex].src;
     });
-</script>
+</script>-->
 <script type="module" src="main.js"></script>
+</html>
