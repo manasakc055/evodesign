@@ -286,12 +286,6 @@
         </section>
 
     </div>
-    <div id="fullscreen-modal" class="fullscreen-modal">
-        <button class="close-btn">&times;</button>
-        <button class="nav-btn prev-btn">&#8249;</button>
-        <img src="" alt="Fullscreen Project" />
-        <button class="nav-btn next-btn">&#8250;</button>
-    </div>
 
     <script>
         const projectItems = document.querySelectorAll('.project-item img');
@@ -550,6 +544,7 @@
                     </a>
                 </div>
             </div>
+        </div>
     </footer>
 
 
@@ -593,6 +588,17 @@
         modalImg.src = projectItems[currentIndex].src;
     });
 </script>-->
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.remove('translate-x-full');
+    });
+
+    document.getElementById('mobile-menu-close').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.add('translate-x-full');
+    });
+</script>
 <script type="module" src="main.js"></script>
 
 </html>
